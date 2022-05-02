@@ -1,7 +1,7 @@
 Step 1 Create a GKE cluster
 
 Step 2 Create a Namespace monitor (good practice)
-	kubectl create ns monitoring
+	kubectl create ns monitor
 
 Step 3 go to helm repo (code) of Promothus and grafana      Helm code is available on 
 	https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
@@ -12,10 +12,10 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo update
 
 Step 5 Install the Grafana and Promothus
-helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitoring
+helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitor
 
 Step 6 You can verify your installation using:
-	kubectl get pods -n monitoring
+	kubectl get pods -n monitor
 
 Step 7 create a service of grafana 
 
