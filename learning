@@ -1,0 +1,1 @@
+kubectl scale --replicas=0 deployment <deployment_name> -n monitoring
